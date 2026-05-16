@@ -1,644 +1,955 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ro Pampalone | Cosmetóloga & Makeup - San Miguel de Tucumán</title>
-    
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2252%22 cy=%2250%22 r=%2244%22 fill=%22%231e3a2f%22/><text y=%2261%22 x=%2250%22 font-size=%2232%22 font-family=%22serif%22 font-weight=%22bold%22 fill=%22%23c5a880%22 text-anchor=%22middle%22>RP</text></svg>">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2252%22 cy=%2250%22 r=%2244%22 fill=%22%231e3a2f%22/><text y=%2261%22 x=%2250%22 font-size=%2232%22 font-family=%22serif%22 font-weight=%22bold%22 fill=%22%23c5a880%22 text-anchor=%22middle%22>RP</text></svg>"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <style>
-        :root {
-            --color-primary: #1e3a2f; /* Verde profundo elegante */
-            --color-secondary: #c5a880; /* Dorado sutil / Champán */
-            --color-accent: #f4eae1; /* Crema suave de fondo */
-            --color-dark: #2b2b2b;
-            --color-muted: #6c757d;
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Plus Jakarta Sans', sans-serif;
-        }
+      :root {
+        --color-primary: #1e3a2f; /* Verde profundo elegante */
+        --color-secondary: #c5a880; /* Dorado sutil / Champán */
+        --color-accent: #f4eae1; /* Crema suave de fondo */
+        --color-dark: #2b2b2b;
+        --color-muted: #6c757d;
+        --font-heading: "Playfair Display", serif;
+        --font-body: "Plus Jakarta Sans", sans-serif;
+      }
 
-        body {
-            font-family: var(--font-body);
-            color: var(--color-dark);
-            background-color: #fcfbfa;
-            overflow-x: hidden;
-        }
+      html,
+      body {
+        font-family: var(--font-body);
+        color: var(--color-dark);
+        background-color: #fcfbfa;
+        overflow-x: hidden;
+        width: 100%;
+      }
 
-        h1, h2, h3, h4, .font-serif {
-            font-family: var(--font-heading);
-        }
+      h1,
+      h2,
+      h3,
+      h4,
+      .font-serif {
+        font-family: var(--font-heading);
+      }
 
-        /* Navbar */
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            z-index: 1030;
-        }
-        .navbar-brand {
-            font-weight: 700;
-            letter-spacing: 1px;
-            color: var(--color-primary) !important;
-        }
-        .nav-link {
-            font-weight: 500;
-            color: var(--color-dark) !important;
-            transition: color 0.3s ease;
-        }
-        .nav-link:hover {
-            color: var(--color-secondary) !important;
-        }
+      /* Navbar */
+      .navbar {
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        z-index: 1030;
+      }
+      .navbar-brand {
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--color-primary) !important;
+      }
+      .nav-link {
+        font-weight: 500;
+        color: var(--color-dark) !important;
+        transition: color 0.3s ease;
+      }
+      .nav-link:hover {
+        color: var(--color-secondary) !important;
+      }
 
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #fbf7f2 0%, #f3eae1 100%);
-            padding: 100px 0 80px 0;
-            position: relative;
-        }
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--color-primary);
-            line-height: 1.2;
-        }
-        .hero-title span {
-            color: var(--color-secondary);
-            font-style: italic;
-        }
-        .btn-primary-custom {
-            background-color: var(--color-primary);
-            color: #fff;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            border: 1px solid var(--color-primary);
-            transition: all 0.3s ease;
-        }
-        .btn-primary-custom:hover {
-            background-color: transparent;
-            color: var(--color-primary);
-            border-color: var(--color-primary);
-        }
-        .btn-outline-custom {
-            border: 1px solid var(--color-primary);
-            color: var(--color-primary);
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            background-color: transparent;
-            transition: all 0.3s ease;
-        }
-        .btn-outline-custom:hover {
-            background-color: var(--color-primary);
-            color: #fff;
-        }
+      /* Hero Section */
+      .hero-section {
+        background: linear-gradient(135deg, #fbf7f2 0%, #f3eae1 100%);
+        padding: 100px 0 80px 0;
+        position: relative;
+      }
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: var(--color-primary);
+        line-height: 1.2;
+      }
+      .hero-title span {
+        color: var(--color-secondary);
+        font-style: italic;
+      }
+      .btn-primary-custom {
+        background-color: var(--color-primary);
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        border: 1px solid var(--color-primary);
+        transition: all 0.3s ease;
+      }
+      .btn-primary-custom:hover {
+        background-color: transparent;
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+      }
+      .btn-outline-custom {
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        background-color: transparent;
+        transition: all 0.3s ease;
+      }
+      .btn-outline-custom:hover {
+        background-color: var(--color-primary);
+        color: #fff;
+      }
 
-        /* Circular Categories */
-        .category-avatar {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid transparent;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-        .category-item:hover .category-avatar {
-            border-color: var(--color-secondary);
-            transform: translateY(-5px);
-        }
-        .category-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--color-primary);
-            margin-top: 15px;
-        }
+      /* Circular Categories */
+      .category-avatar {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid transparent;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
+      .category-item:hover .category-avatar {
+        border-color: var(--color-secondary);
+        transform: translateY(-5px);
+      }
+      .category-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-top: 15px;
+      }
 
-        /* Promo Banners */
-        .promo-card {
-            border-radius: 20px;
-            overflow: hidden;
-            position: relative;
-            min-height: 260px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-            border: none;
-            transition: transform 0.3s ease;
-        }
-        .promo-card:hover {
-            transform: translateY(-5px);
-        }
-        .promo-bg-1 {
-            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url('https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&w=800') center/cover;
-        }
-        .promo-bg-2 {
-            background: linear-gradient(rgba(30, 58, 47, 0.8), rgba(30, 58, 47, 0.95)), url('https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=800') center/cover;
-        }
+      /* Promo Banners */
+      .promo-card {
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        min-height: 260px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+        border: none;
+        transition: transform 0.3s ease;
+      }
+      .promo-card:hover {
+        transform: translateY(-5px);
+      }
+      .promo-bg-1 {
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+          url("https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&w=800")
+            center/cover;
+      }
+      .promo-bg-2 {
+        background:
+          linear-gradient(rgba(30, 58, 47, 0.8), rgba(30, 58, 47, 0.95)),
+          url("https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=800")
+            center/cover;
+      }
 
-        /* About Us Section with Collage */
-        .collage-container {
-            position: relative;
-        }
-        .collage-img-main {
-            border-radius: 24px;
-            width: 85%;
-            height: 400px;
-            object-fit: cover;
-            border: 8px solid #fff;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        }
-        .collage-img-sub {
-            position: absolute;
-            bottom: -30px;
-            right: 0;
-            width: 45%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 20px;
-            border: 6px solid #fff;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        .badge-stat {
-            background-color: var(--color-primary);
-            color: #fff;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(30, 58, 47, 0.2);
-        }
+      /* About Us Section with Collage */
+      .collage-container {
+        position: relative;
+      }
+      .collage-img-main {
+        border-radius: 24px;
+        width: 85%;
+        height: 400px;
+        object-fit: cover;
+        border: 8px solid #fff;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      }
+      .collage-img-sub {
+        position: absolute;
+        bottom: -30px;
+        right: 0;
+        width: 45%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 20px;
+        border: 6px solid #fff;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+      .badge-stat {
+        background-color: var(--color-primary);
+        color: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(30, 58, 47, 0.2);
+      }
 
-        /* Services / Best Sellers */
-        .service-card {
-            background: #fff;
-            border-radius: 20px;
-            border: 1px solid rgba(0,0,0,0.04);
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            transition: all 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        }
-        .service-img-wrapper {
-            position: relative;
-            height: 250px;
-            overflow: hidden;
-        }
-        .service-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .service-card:hover .service-img {
-            transform: scale(1.08);
-        }
-        .service-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background-color: var(--color-secondary);
-            color: #fff;
-            padding: 5px 12px;
-            border-radius: 30px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
+      /* Services / Best Sellers */
+      .service-card {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+        transition: all 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      }
+      .service-img-wrapper {
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+      }
+      .service-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .service-card:hover .service-img {
+        transform: scale(1.08);
+      }
+      .service-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background-color: var(--color-secondary);
+        color: #fff;
+        padding: 5px 12px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
 
-        /* Form Section */
-        .booking-section {
-            background-color: #f7f3ed;
-            border-radius: 30px;
-            padding: 50px;
-        }
-        .form-control, .form-select {
-            padding: 14px 20px;
-            border-radius: 12px;
-            border: 1px solid rgba(0,0,0,0.1);
-            background-color: #fff;
-        }
-        .form-control:focus, .form-select:focus {
-            border-color: var(--color-primary);
-            box-shadow: 0 0 0 0.25rem rgba(30, 58, 47, 0.1);
-        }
+      /* Form Section */
+      .booking-section {
+        background-color: #f7f3ed;
+        border-radius: 30px;
+        padding: 50px;
+      }
+      .form-control,
+      .form-select {
+        padding: 14px 20px;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+      }
+      .form-control:focus,
+      .form-select:focus {
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 0.25rem rgba(30, 58, 47, 0.1);
+      }
 
-        /* Floating JoinChat WhatsApp Button */
-        .joinchat-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            z-index: 9999;
-            text-decoration: none;
-            animation: popIn 0.5s ease forwards;
+      /* Floating JoinChat WhatsApp Button */
+      .joinchat-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        z-index: 9999;
+        text-decoration: none;
+        animation: popIn 0.5s ease forwards;
+      }
+      @keyframes popIn {
+        0% {
+          transform: scale(0);
+          opacity: 0;
         }
-        @keyframes popIn {
-            0% { transform: scale(0); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
+        100% {
+          transform: scale(1);
+          opacity: 1;
         }
-        .joinchat-btn:hover {
-            transform: scale(1.1);
-            color: white;
-            background-color: #20ba5a;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
-        }
-        .joinchat-btn::before {
-            content: "¡Reserva tu turno aquí!";
-            position: absolute;
-            right: 75px;
-            top: 12px;
-            background-color: #fff;
-            color: #4a4a4a;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 6px 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            white-space: nowrap;
-            opacity: 0;
-            transform: translateX(10px);
-            transition: all 0.3s ease;
-            pointer-events: none;
-            font-family: var(--font-body);
-        }
-        .joinchat-btn:hover::before {
-            opacity: 1;
-            transform: translateX(0);
-        }
+      }
+      .joinchat-btn:hover {
+        transform: scale(1.1);
+        color: white;
+        background-color: #20ba5a;
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+      }
+      .joinchat-btn::before {
+        content: "¡Reserva tu turno aquí!";
+        position: absolute;
+        right: 75px;
+        top: 12px;
+        background-color: #fff;
+        color: #4a4a4a;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 6px 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        white-space: nowrap;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: all 0.3s ease;
+        pointer-events: none;
+        font-family: var(--font-body);
+      }
+      .joinchat-btn:hover::before {
+        opacity: 1;
+        transform: translateX(0);
+      }
 
-        /* Footer */
-        footer {
-            background-color: var(--color-primary);
-            color: #fff;
-            padding: 40px 0;
-        }
-        .footer-logo {
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            color: var(--color-secondary);
-            text-decoration: none;
-            transition: opacity 0.3s ease;
-        }
-        .footer-logo:hover {
-            opacity: 0.8;
-            color: var(--color-secondary);
-        }
+      /* Footer */
+      footer {
+        background-color: var(--color-primary);
+        color: #fff;
+        padding: 40px 0;
+      }
+      .footer-logo {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: var(--color-secondary);
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+      }
+      .footer-logo:hover {
+        opacity: 0.8;
+        color: var(--color-secondary);
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">RO PAMPALONE</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav align-items-center gap-2">
-                    <li class="nav-item"><a class="nav-link" href="#categorias">Categorías</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary-custom ms-2" href="#reservar">Solicitar Turno</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="#">RO PAMPALONE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav align-items-center gap-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#categorias">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ubicacion">Ubicación</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary-custom ms-2" href="#reservar"
+                >Solicitar Turno</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center gy-5">
-                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <i class="bi bi-stars text-warning fs-5"></i>
-                        <span class="text-uppercase fw-semibold text-muted small">Tu Momento de Bienestar y Belleza</span>
-                    </div>
-                    <h1 class="hero-title mb-4">Tu Centro de Estética <span>& Cosmetología</span> Definitivo</h1>
-                    <p class="lead text-muted mb-4">Tratamientos faciales personalizados, makeup profesional y cuidado integral de la piel en San Miguel de Tucumán. Potenciamos tu belleza natural con resultados reales.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#reservar" class="btn btn-primary-custom">Agendar Turno Gratis</a>
-                        <a href="#servicios" class="btn btn-outline-custom">Ver Tratamientos</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Estética Facial" class="img-fluid rounded-4 shadow-lg" style="max-height: 480px; width: 100%; object-fit: cover;">
-                </div>
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-duration="1000">
+            <div class="d-flex align-items-center gap-2 mb-3">
+              <i class="bi bi-stars text-warning fs-5"></i>
+              <span class="text-uppercase fw-semibold text-muted small"
+                >Tu Momento de Bienestar y Belleza</span
+              >
             </div>
+            <h1 class="hero-title mb-4">
+              Tu Centro de Estética <span>& Cosmetología</span> Definitivo
+            </h1>
+            <p class="lead text-muted mb-4">
+              Tratamientos faciales personalizados, makeup profesional y cuidado
+              integral de la piel en San Miguel de Tucumán. Potenciamos tu
+              belleza natural con resultados reales.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#reservar" class="btn btn-primary-custom"
+                >Agendar Turno Gratis</a
+              >
+              <a href="#servicios" class="btn btn-outline-custom"
+                >Ver Tratamientos</a
+              >
+            </div>
+          </div>
+          <div
+            class="col-lg-6 text-center"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Estética Facial"
+              class="img-fluid rounded-4 shadow-lg"
+              style="max-height: 480px; width: 100%; object-fit: cover"
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="categorias" class="py-5 bg-white">
-        <div class="container text-center py-4">
-            <span class="text-uppercase fw-semibold text-secondary small" data-aos="fade-up">Nuestras Especialidades</span>
-            <h2 class="mt-2 mb-5 fw-bold text-dark" data-aos="fade-up" data-aos-delay="100">Explora por Categoría</h2>
-            <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 justify-content-center g-4">
-                <div class="col category-item" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&w=400" class="category-avatar" alt="Cosmetología">
-                    <div class="category-title">Cosmetología</div>
-                </div>
-                <div class="col category-item" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="https://images.pexels.com/photos/3321416/pexels-photo-3321416.jpeg?auto=compress&cs=tinysrgb&w=400" class="category-avatar" alt="Maquillaje">
-                    <div class="category-title">Maquillaje</div>
-                </div>
-                <div class="col category-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=400" class="category-avatar" alt="Peeling">
-                    <div class="category-title">Peeling Químico</div>
-                </div>
-                <div class="col category-item" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="https://images.pexels.com/photos/4202332/pexels-photo-4202332.jpeg?auto=compress&cs=tinysrgb&w=400" class="category-avatar" alt="Limpieza Facial">
-                    <div class="category-title">Limpieza Facial</div>
-                </div>
-                <div class="col category-item" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="https://images.pexels.com/photos/3985298/pexels-photo-3985298.jpeg?auto=compress&cs=tinysrgb&w=400" class="category-avatar" alt="Dermoestética">
-                    <div class="category-title">Dermoestética</div>
-                </div>
-            </div>
+      <div class="container text-center py-4">
+        <span
+          class="text-uppercase fw-semibold text-secondary small"
+          data-aos="fade-up"
+          >Nuestras Especialidades</span
+        >
+        <h2
+          class="mt-2 mb-5 fw-bold text-dark"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Explora por Categoría
+        </h2>
+        <div
+          class="row row-cols-2 row-cols-sm-3 row-cols-lg-5 justify-content-center g-4"
+        >
+          <div
+            class="col category-item"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <img
+              src="https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&w=400"
+              class="category-avatar"
+              alt="Cosmetología"
+            />
+            <div class="category-title">Cosmetología</div>
+          </div>
+          <div
+            class="col category-item"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <img
+              src="https://images.pexels.com/photos/3321416/pexels-photo-3321416.jpeg?auto=compress&cs=tinysrgb&w=400"
+              class="category-avatar"
+              alt="Maquillaje"
+            />
+            <div class="category-title">Maquillaje</div>
+          </div>
+          <div
+            class="col category-item"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <img
+              src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=400"
+              class="category-avatar"
+              alt="Peeling"
+            />
+            <div class="category-title">Peeling Químico</div>
+          </div>
+          <div
+            class="col category-item"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <img
+              src="https://images.pexels.com/photos/4202332/pexels-photo-4202332.jpeg?auto=compress&cs=tinysrgb&w=400"
+              class="category-avatar"
+              alt="Limpieza Facial"
+            />
+            <div class="category-title">Limpieza Facial</div>
+          </div>
+          <div
+            class="col category-item"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <img
+              src="https://images.pexels.com/photos/3985298/pexels-photo-3985298.jpeg?auto=compress&cs=tinysrgb&w=400"
+              class="category-avatar"
+              alt="Dermoestética"
+            />
+            <div class="category-title">Dermoestética</div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="pb-5 bg-white">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-6" data-aos="fade-right" data-aos-offset="150">
-                    <div class="card promo-card promo-bg-1 p-5 d-flex flex-column justify-content-end text-white">
-                        <span class="badge bg-warning align-self-start mb-2 px-3 py-2 text-dark fw-bold">PROMO IMPERDIBLE</span>
-                        <h3 class="fw-bold mb-2">Descuento Especial en Makeup</h3>
-                        <p class="mb-3 opacity-90">Reserva tu servicio de maquillaje para eventos esta semana y obtén un 20% off.</p>
-                        <a href="#reservar" class="btn btn-light align-self-start rounded-pill px-4 btn-sm fw-semibold">Solicitar Ahora</a>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-left" data-aos-offset="150">
-                    <div class="card promo-card promo-bg-2 p-5 d-flex flex-column justify-content-end text-white">
-                        <span class="badge bg-light text-dark align-self-start mb-2 px-3 py-2 fw-bold">CUIDADO INTENSIVO</span>
-                        <h3 class="fw-bold mb-2">Renovación Celular Completa</h3>
-                        <p class="mb-3 opacity-90">Plan de Limpieza Facial Profunda + Peeling adaptado a las necesidades de tu tipo de piel.</p>
-                        <a href="#reservar" class="btn btn-outline-light align-self-start rounded-pill px-4 btn-sm fw-semibold">Ver Agenda</a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-up">
+            <div
+              class="card promo-card promo-bg-1 p-5 d-flex flex-column justify-content-end text-white"
+            >
+              <span
+                class="badge bg-warning align-self-start mb-2 px-3 py-2 text-dark fw-bold"
+                >PROMO IMPERDIBLE</span
+              >
+              <h3 class="fw-bold mb-2">Descuento Especial en Makeup</h3>
+              <p class="mb-3 opacity-90">
+                Reserva tu servicio de maquillaje para eventos esta semana y
+                obtén un 20% off.
+              </p>
+              <a
+                href="#reservar"
+                class="btn btn-light align-self-start rounded-pill px-4 btn-sm fw-semibold"
+                >Solicitar Ahora</a
+              >
             </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="card promo-card promo-bg-2 p-5 d-flex flex-column justify-content-end text-white"
+            >
+              <span
+                class="badge bg-light text-dark align-self-start mb-2 px-3 py-2 fw-bold"
+                >CUIDADO INTENSIVO</span
+              >
+              <h3 class="fw-bold mb-2">Renovación Celular Completa</h3>
+              <p class="mb-3 opacity-90">
+                Plan de Limpieza Facial Profunda + Peeling adaptado a las
+                necesidades de tu tipo de piel.
+              </p>
+              <a
+                href="#reservar"
+                class="btn btn-outline-light align-self-start rounded-pill px-4 btn-sm fw-semibold"
+                >Ver Agenda</a
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="sobre-mi" class="py-5" style="background-color: #faf8f5;">
-        <div class="container py-4">
-            <div class="row align-items-center gy-5">
-                <div class="col-lg-6 collage-container" data-aos="zoom-in-right" data-aos-offset="200">
-                    <img src="https://images.pexels.com/photos/3985301/pexels-photo-3985301.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Tratamiento Ro" class="collage-img-main">
-                    <img src="https://images.pexels.com/photos/4612143/pexels-photo-4612143.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cosmetología" class="collage-img-sub" data-aos="fade-up" data-aos-delay="400">
-                </div>
-                <div class="col-lg-6 ps-lg-5" data-aos="fade-left" data-aos-offset="200">
-                    <span class="text-uppercase tracking-wider fw-semibold text-secondary small">Tu Profesional de Confianza</span>
-                    <h2 class="fw-bold mt-2 text-dark mb-4">Tu Viaje hacia una Elegancia Sin Esfuerzo</h2>
-                    <p class="text-muted">Hola, soy <strong>Ro Pampalone</strong>. En mi espacio en el centro de San Miguel de Tucumán, me enfoco en ofrecer una experiencia de dermoestética y cosmetología de alto nivel. Entiendo la piel como un órgano único que cuenta tu historia; por eso, cada tratamiento es 100% personalizado según tus objetivos.</p>
-                    
-                    <div class="badge-stat d-flex justify-content-around text-center mt-4" data-aos="flip-up" data-aos-delay="300">
-                        <div>
-                            <h4 class="fw-bold mb-0 text-warning">10+</h4>
-                            <small class="opacity-75">Tratamientos</small>
-                        </div>
-                        <div class="border-start border-light opacity-50"></div>
-                        <div>
-                            <h4 class="fw-bold mb-0 text-warning">100%</h4>
-                            <small class="opacity-75">Personalizado</small>
-                        </div>
-                        <div class="border-start border-light opacity-50"></div>
-                        <div>
-                            <h4 class="fw-bold mb-0 text-warning">Piso 4 - Of. 3</h4>
-                            <small class="opacity-75">San Martín 666</small>
-                        </div>
-                    </div>
-                </div>
+    <section id="sobre-mi" class="py-5" style="background-color: #faf8f5">
+      <div class="container py-4">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6 collage-container" data-aos="fade-up">
+            <img
+              src="https://images.pexels.com/photos/3985301/pexels-photo-3985301.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Tratamiento Ro"
+              class="collage-img-main"
+            />
+            <img
+              src="https://images.pexels.com/photos/4612143/pexels-photo-4612143.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt="Cosmetología"
+              class="collage-img-sub"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            />
+          </div>
+          <div class="col-lg-6 ps-lg-5" data-aos="fade-up">
+            <span
+              class="text-uppercase tracking-wider fw-semibold text-secondary small"
+              >Tu Profesional de Confianza</span
+            >
+            <h2 class="fw-bold mt-2 text-dark mb-4">
+              Tu Viaje hacia una Elegancia Sin Esfuerzo
+            </h2>
+            <p class="text-muted">
+              Hola, soy <strong>Ro Pampalone</strong>. En mi espacio en el
+              centro de San Miguel de Tucumán, me enfoco en ofrecer una
+              experiencia de dermoestética y cosmetología de alto nivel.
+              Entiendo la piel como un órgano único que cuenta tu historia; por
+              eso, cada tratamiento es 100% personalizado según tus objetivos.
+            </p>
+
+            <div
+              class="badge-stat d-flex justify-content-around text-center mt-4"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div>
+                <h4 class="fw-bold mb-0 text-warning">10+</h4>
+                <small class="opacity-75">Tratamientos</small>
+              </div>
+              <div class="border-start border-light opacity-50"></div>
+              <div>
+                <h4 class="fw-bold mb-0 text-warning">100%</h4>
+                <small class="opacity-75">Personalizado</small>
+              </div>
+              <div class="border-start border-light opacity-50"></div>
+              <div>
+                <h4 class="fw-bold mb-0 text-warning">Piso 4 - Of. 3</h4>
+                <small class="opacity-75">San Martín 666</small>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="servicios" class="py-5 bg-white">
-        <div class="container py-4">
-            <div class="text-center mb-5" data-aos="fade-up">
-                <span class="text-uppercase tracking-wider fw-semibold text-secondary small">Tratamientos Destacados</span>
-                <h2 class="fw-bold text-dark mt-2">Los Más Solicitados por Nuestras Pacientes</h2>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100" data-aos-offset="100">
-                    <div class="card service-card h-100">
-                        <div class="service-img-wrapper">
-                            <span class="service-badge">Piel Radiante</span>
-                            <img src="https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&w=600" class="service-img" alt="Limpieza Profunda">
-                        </div>
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <h5 class="fw-bold text-dark mb-0">Limpieza Facial Profunda</h5>
-                                <span class="text-success fw-bold"><i class="bi bi-star-fill text-warning me-1"></i>4.9</span>
-                            </div>
-                            <p class="text-muted small">Incluye higiene analítica, exfoliación ultrasónica, extracciones, altafrecuencia, máscara descongestiva y masajes tonificantes.</p>
-                            <a href="#reservar" class="btn btn-outline-custom w-100 btn-sm mt-3">Reservar Turno</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200" data-aos-offset="100">
-                    <div class="card service-card h-100">
-                        <div class="service-img-wrapper">
-                            <span class="service-badge">Renovación</span>
-                            <img src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=600" class="service-img" alt="Peeling Personalizado">
-                        </div>
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <h5 class="fw-bold text-dark mb-0">Peeling Cosmético</h5>
-                                <span class="text-success fw-bold"><i class="bi bi-star-fill text-warning me-1"></i>4.8</span>
-                            </div>
-                            <p class="text-muted small">Tratamiento de renovación celular óptimo para atenuar manchas, líneas de expresión y secuelas de acné, devolviendo luminosidad.</p>
-                            <a href="#reservar" class="btn btn-outline-custom w-100 btn-sm mt-3">Reservar Turno</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300" data-aos-offset="100">
-                    <div class="card service-card h-100">
-                        <div class="service-img-wrapper">
-                            <span class="service-badge">Social & Novias</span>
-                            <img src="https://images.pexels.com/photos/3321416/pexels-photo-3321416.jpeg?auto=compress&cs=tinysrgb&w=600" class="service-img" alt="Maquillaje Profesional">
-                        </div>
-                        <div class="card-body p-4">
-                            <div class="d-flex justify-content-between align-items-center mb-2">
-                                <h5 class="fw-bold text-dark mb-0">Makeup Profesional</h5>
-                                <span class="text-success fw-bold"><i class="bi bi-star-fill text-warning me-1"></i>5.0</span>
-                            </div>
-                            <p class="text-muted small">Maquillaje de alta definición y larga duración para eventos, quinceañeras y novias con productos premium nacionales e importados.</p>
-                            <a href="#reservar" class="btn btn-outline-custom w-100 btn-sm mt-3">Reservar Turno</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container py-4">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span
+            class="text-uppercase tracking-wider fw-semibold text-secondary small"
+            >Tratamientos Destacados</span
+          >
+          <h2 class="fw-bold text-dark mt-2">
+            Los Más Solicitados por Nuestras Pacientes
+          </h2>
         </div>
+
+        <div class="row g-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card service-card h-100">
+              <div class="service-img-wrapper">
+                <span class="service-badge">Piel Radiante</span>
+                <img
+                  src="https://images.pexels.com/photos/3762871/pexels-photo-3762871.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  class="service-img"
+                  alt="Limpieza Profunda"
+                />
+              </div>
+              <div class="card-body p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="fw-bold text-dark mb-0">
+                    Limpieza Facial Profunda
+                  </h5>
+                  <span class="text-success fw-bold"
+                    ><i class="bi bi-star-fill text-warning me-1"></i>4.9</span
+                  >
+                </div>
+                <p class="text-muted small">
+                  Incluye higiene analítica, exfoliación ultrasónica,
+                  extracciones, altafrecuencia, máscara descongestiva y masajes
+                  tonificantes.
+                </p>
+                <a
+                  href="#reservar"
+                  class="btn btn-outline-custom w-100 btn-sm mt-3"
+                  >Reservar Turno</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card service-card h-100">
+              <div class="service-img-wrapper">
+                <span class="service-badge">Renovación</span>
+                <img
+                  src="https://images.pexels.com/photos/3985338/pexels-photo-3985338.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  class="service-img"
+                  alt="Peeling Personalizado"
+                />
+              </div>
+              <div class="card-body p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="fw-bold text-dark mb-0">Peeling Cosmético</h5>
+                  <span class="text-success fw-bold"
+                    ><i class="bi bi-star-fill text-warning me-1"></i>4.8</span
+                  >
+                </div>
+                <p class="text-muted small">
+                  Tratamiento de renovación celular óptimo para atenuar manchas,
+                  líneas de expresión y secuelas de acné, devolviendo
+                  luminosidad.
+                </p>
+                <a
+                  href="#reservar"
+                  class="btn btn-outline-custom w-100 btn-sm mt-3"
+                  >Reservar Turno</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card service-card h-100">
+              <div class="service-img-wrapper">
+                <span class="service-badge">Social & Novias</span>
+                <img
+                  src="https://images.pexels.com/photos/3321416/pexels-photo-3321416.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  class="service-img"
+                  alt="Maquillaje Profesional"
+                />
+              </div>
+              <div class="card-body p-4">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-2"
+                >
+                  <h5 class="fw-bold text-dark mb-0">Makeup Profesional</h5>
+                  <span class="text-success fw-bold"
+                    ><i class="bi bi-star-fill text-warning me-1"></i>5.0</span
+                  >
+                </div>
+                <p class="text-muted small">
+                  Maquillaje de alta definición y larga duración para eventos,
+                  quinceañeras y novias con productos premium nacionales e
+                  importados.
+                </p>
+                <a
+                  href="#reservar"
+                  class="btn btn-outline-custom w-100 btn-sm mt-3"
+                  >Reservar Turno</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="reservar" class="py-5 bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8" data-aos="zoom-in" data-aos-offset="150">
-                    <div class="booking-section shadow-sm">
-                        <div class="text-center mb-4">
-                            <i class="bi bi-calendar-check text-success fs-1"></i>
-                            <h2 class="fw-bold text-dark mt-2">Agenda tu Turno / Consulta</h2>
-                            <p class="text-muted">Completa tus datos y se generará tu solicitud directo al WhatsApp de Ro Pampalone para confirmar el horario final.</p>
-                        </div>
-                        
-                        <form id="appointmentForm">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Nombre Completo</label>
-                                    <input type="text" class="form-control" id="formName" placeholder="Ej. María González" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Teléfono de Contacto</label>
-                                    <input type="tel" class="form-control" id="formPhone" placeholder="Ej. 381 555 5555" required>
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="form-label fw-semibold">Selecciona el Servicio o Consulta</label>
-                                    <select class="form-select" id="formService" required>
-                                        <option value="" disabled selected>Elegir un tratamiento...</option>
-                                        <option value="Limpieza Facial Profunda">Limpieza Facial Profunda</option>
-                                        <option value="Peeling Cosmético / Químico">Peeling Cosmético / Químico</option>
-                                        <option value="Maquillaje Profesional de Eventos">Maquillaje Profesional de Eventos</option>
-                                        <option value="Tratamiento Anti-age / Dermoestética">Tratamiento Anti-age / Dermoestética</option>
-                                        <option value="Consulta Inicial de Evaluación de Piel">Consulta Inicial de Evaluación de Piel</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Día de Preferencia</label>
-                                    <select class="form-select" id="formDay" required>
-                                        <option value="Lunes a Viernes">Lunes a Viernes</option>
-                                        <option value="Sábados">Sábados</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label fw-semibold">Horario de Preferencia</label>
-                                    <select class="form-select" id="formTime" required>
-                                        <option value="Mañana (9:00 a 13:00)">Mañana (9:00 a 13:00)</option>
-                                        <option value="Tarde (16:00 a 20:00)">Tarde (16:00 a 20:00)</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-12">
-                                    <label class="form-label fw-semibold">Notas adicionales (Opcional)</label>
-                                    <textarea class="form-control" id="formNotes" rows="3" placeholder="Cuéntame brevemente sobre tu tipo de piel o evento..."></textarea>
-                                </div>
-                                <div class="col-md-12 mt-4">
-                                    <button type="submit" class="btn btn-primary-custom w-100 py-3 text-uppercase fw-bold">
-                                        <i class="bi bi-whatsapp me-2"></i>Enviar Solicitud por WhatsApp
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8" data-aos="fade-up">
+            <div class="booking-section shadow-sm">
+              <div class="text-center mb-4">
+                <i class="bi bi-calendar-check text-success fs-1"></i>
+                <h2 class="fw-bold text-dark mt-2">
+                  Agenda tu Turno / Consulta
+                </h2>
+                <p class="text-muted">
+                  Completa tus datos y se generará tu solicitud directo al
+                  WhatsApp de Ro Pampalone para confirmar el horario final.
+                </p>
+              </div>
+
+              <form id="appointmentForm">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold"
+                      >Nombre Completo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="formName"
+                      placeholder="Ej. María González"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold"
+                      >Teléfono de Contacto</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="formPhone"
+                      placeholder="Ej. 381 555 5555"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label fw-semibold"
+                      >Selecciona el Servicio o Consulta</label
+                    >
+                    <select class="form-select" id="formService" required>
+                      <option value="" disabled selected>
+                        Elegir un tratamiento...
+                      </option>
+                      <option value="Limpieza Facial Profunda">
+                        Limpieza Facial Profunda
+                      </option>
+                      <option value="Peeling Cosmético / Químico">
+                        Peeling Cosmético / Químico
+                      </option>
+                      <option value="Maquillaje Profesional de Eventos">
+                        Maquillaje Profesional de Eventos
+                      </option>
+                      <option value="Tratamiento Anti-age / Dermoestética">
+                        Tratamiento Anti-age / Dermoestética
+                      </option>
+                      <option value="Consulta Inicial de Evaluación de Piel">
+                        Consulta Inicial de Evaluación de Piel
+                      </option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold"
+                      >Día de Preferencia</label
+                    >
+                    <select class="form-select" id="formDay" required>
+                      <option value="Lunes a Viernes">Lunes a Viernes</option>
+                      <option value="Sábados">Sábados</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-semibold"
+                      >Horario de Preferencia</label
+                    >
+                    <select class="form-select" id="formTime" required>
+                      <option value="Mañana (9:00 a 13:00)">
+                        Mañana (9:00 a 13:00)
+                      </option>
+                      <option value="Tarde (16:00 a 20:00)">
+                        Tarde (16:00 a 20:00)
+                      </option>
+                    </select>
+                  </div>
+                  <div class="col-md-12">
+                    <label class="form-label fw-semibold"
+                      >Notas adicionales (Opcional)</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="formNotes"
+                      rows="3"
+                      placeholder="Cuéntame brevemente sobre tu tipo de piel o evento..."
+                    ></textarea>
+                  </div>
+                  <div class="col-md-12 mt-4">
+                    <button
+                      type="submit"
+                      class="btn btn-primary-custom w-100 py-3 text-uppercase fw-bold"
+                    >
+                      <i class="bi bi-whatsapp me-2"></i>Enviar Solicitud por
+                      WhatsApp
+                    </button>
+                  </div>
                 </div>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="ubicacion" class="py-5 bg-white">
-        <div class="container">
-            <div class="row align-items-center gy-4">
-                <div class="col-md-5" data-aos="fade-right">
-                    <span class="text-uppercase fw-semibold text-secondary small">¿Dónde Estamos?</span>
-                    <h2 class="fw-bold text-dark mt-2 mb-4">Visita Nuestro Consultorio</h2>
-                    <div class="d-flex align-items-start gap-3 mb-3">
-                        <i class="bi bi-geo-alt-fill text-success fs-4"></i>
-                        <div>
-                            <h6 class="fw-bold mb-0">Dirección Profesional</h6>
-                            <p class="text-muted mb-0">San Martín 666, Piso 4, Oficina 3<br>San Miguel de Tucumán, Tucumán</p>
-                        </div>
-                    </div>
-                    <div class="d-flex align-items-start gap-3 mb-3">
-                        <i class="bi bi-clock-fill text-success fs-5"></i>
-                        <div>
-                            <h6 class="fw-bold mb-0">Atención Personalizada</h6>
-                            <p class="text-muted mb-0">Lunes a Sábados — Con turno previo únicamente.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-7" data-aos="fade-left">
-                    <div class="ratio ratio-21x9 rounded-4 overflow-hidden shadow-sm border">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.336492147132!2d-65.20953082534453!3d-26.82924778972008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c1113ba2811%3A0x109ffe099ca08f!2sGral.%20Jos%C3%A9%20de%20San%20Mart%C3%ADn%20666%2C%20T4000CVN%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1778962603748!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center gy-4">
+          <div class="col-md-5" data-aos="fade-up">
+            <span class="text-uppercase fw-semibold text-secondary small"
+              >¿Dónde Estamos?</span
+            >
+            <h2 class="fw-bold text-dark mt-2 mb-4">
+              Visita Nuestro Consultorio
+            </h2>
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="bi bi-geo-alt-fill text-success fs-4"></i>
+              <div>
+                <h6 class="fw-bold mb-0">Dirección Profesional</h6>
+                <p class="text-muted mb-0">
+                  San Martín 666, Piso 4, Oficina 3<br />San Miguel de Tucumán,
+                  Tucumán
+                </p>
+              </div>
             </div>
+            <div class="d-flex align-items-start gap-3 mb-3">
+              <i class="bi bi-clock-fill text-success fs-5"></i>
+              <div>
+                <h6 class="fw-bold mb-0">Atención Personalizada</h6>
+                <p class="text-muted mb-0">
+                  Lunes a Sábados — Con turno previo únicamente.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7" data-aos="fade-up" data-aos-delay="100">
+            <div
+              class="ratio ratio-21x9 rounded-4 overflow-hidden shadow-sm border"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.336492147132!2d-65.20953082534453!3d-26.82924778972008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94225c1113ba2811%3A0x109ffe099ca08f!2sGral.%20Jos%C3%A9%20de%20San%20Mart%C3%ADn%20666%2C%20T4000CVN%20San%20Miguel%20de%20Tucum%C3%A1n%2C%20Tucum%C3%A1n!5e0!3m2!1ses-419!2sar!4v1778962603748!5m2!1ses-419!2sar"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <footer class="text-center text-lg-start">
-        <div class="container p-4">
-            <div class="row align-items-center">
-                <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
-                    <h5 class="fw-bold mb-1">Ro Pampalone - Cosmetóloga & Makeup</h5>
-                    <p class="small mb-0 opacity-75"><i class="bi bi-geo-alt-fill me-1"></i> San Martín 666, Piso 4, Oficina 3, San Miguel de Tucumán</p>
-                </div>
-                <div class="col-lg-6 text-center text-lg-end">
-                    <span class="small opacity-75">© 2026 Desarrollado por </span>
-                    <a href="#" class="footer-logo">EzequielMonachesiWeb</a>
-                </div>
-            </div>
+      <div class="container p-4">
+        <div class="row align-items-center">
+          <div class="col-lg-6 text-center text-lg-start mb-3 mb-lg-0">
+            <h5 class="fw-bold mb-1">Ro Pampalone - Cosmetóloga & Makeup</h5>
+            <p class="small mb-0 opacity-75">
+              <i class="bi bi-geo-alt-fill me-1"></i> San Martín 666, Piso 4,
+              Oficina 3, San Miguel de Tucumán
+            </p>
+          </div>
+          <div class="col-lg-6 text-center text-lg-end">
+            <span class="small opacity-75">© 2026 Desarrollado por </span>
+            <a href="https://wa.me/5493816173184" class="footer-logo">EMWeb</a>
+          </div>
         </div>
+      </div>
     </footer>
 
-    <a href="https://wa.me/5493816173184?text=Hola%20Ro,%20quiero%20hacerte%20una%20consulta%20sobre%20tus%20tratamientos%20estéticos." 
-       class="joinchat-btn" 
-       target="_blank" 
-       aria-label="Contactar por WhatsApp">
-        <i class="bi bi-whatsapp"></i>
+    <a
+      href="https://wa.me/5493816173184?text=Hola%20Ro,%20quiero%20hacerte%20una%20consulta%20sobre%20tus%20tratamientos%20estéticos."
+      class="joinchat-btn"
+      target="_blank"
+      aria-label="Contactar por WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            once: true,
-            mirror: false,
-            duration: 800
-        });
+      AOS.init({
+        once: true,
+        mirror: false,
+        duration: 800,
+      });
     </script>
 
     <script>
-        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('formName').value;
-            const phone = document.getElementById('formPhone').value;
-            const service = document.getElementById('formService').value;
-            const day = document.getElementById('formDay').value;
-            const time = document.getElementById('formTime').value;
-            const notes = document.getElementById('formNotes').value || 'Sin notas adicionales';
-            
-            const whatsappNumber = "5493816173184";
-            
-            const message = `Hola Ro Pampalone! Me gustaría solicitar un turno.%0A%0A` +
-                            `*Nombre:* ${encodeURIComponent(name)}%0A` +
-                            `*Teléfono:* ${encodeURIComponent(phone)}%0A` +
-                            `*Servicio:* ${encodeURIComponent(service)}%0A` +
-                            `*Preferencia:* ${encodeURIComponent(day)} en el horario de la ${encodeURIComponent(time)}%0A` +
-                            `*Notas:* ${encodeURIComponent(notes)}`;
-            
-            window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+      document
+        .getElementById("appointmentForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("formName").value;
+          const phone = document.getElementById("formPhone").value;
+          const service = document.getElementById("formService").value;
+          const day = document.getElementById("formDay").value;
+          const time = document.getElementById("formTime").value;
+          const notes =
+            document.getElementById("formNotes").value ||
+            "Sin notas adicionales";
+
+          const whatsappNumber = "5493816173184";
+
+          const message =
+            `Hola Ro Pampalone! Me gustaría solicitar un turno.%0A%0A` +
+            `*Nombre:* ${encodeURIComponent(name)}%0A` +
+            `*Teléfono:* ${encodeURIComponent(phone)}%0A` +
+            `*Servicio:* ${encodeURIComponent(service)}%0A` +
+            `*Preferencia:* ${encodeURIComponent(day)} en el horario de la ${encodeURIComponent(time)}%0A` +
+            `*Notas:* ${encodeURIComponent(notes)}`;
+
+          window.open(
+            `https://wa.me/${whatsappNumber}?text=${message}`,
+            "_blank",
+          );
         });
     </script>
-</body>
+  </body>
 </html>
