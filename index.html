@@ -31,7 +31,7 @@
       :root {
         --color-primary: #1e3a2f; /* Verde profundo elegante */
         --color-secondary: #c5a880; /* Dorado sutil / Champán */
-        --color-accent: #f4eae1; /* Crema suave de fondo */
+        --color-accent: #faf5f0; /* Crema extra suave cálido */
         --color-dark: #2b2b2b;
         --color-muted: #6c757d;
         --font-heading: "Playfair Display", serif;
@@ -237,6 +237,25 @@
         font-weight: 600;
       }
 
+      /* Section Bridal & Crowns */
+      .bridal-section {
+        background-color: var(--color-accent);
+        border-radius: 30px;
+        padding: 60px 0;
+      }
+      .bridal-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(197, 168, 128, 0.2);
+        border-radius: 20px;
+        transition: all 0.3s ease;
+      }
+      .bridal-card:hover {
+        background: #fff;
+        box-shadow: 0 15px 35px rgba(30, 58, 47, 0.05);
+        border-color: var(--color-secondary);
+      }
+
       /* Form Section */
       .booking-section {
         background-color: #f7f3ed;
@@ -359,6 +378,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#servicios">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#novias">Novias & Coronas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#ubicacion">Ubicación</a>
@@ -718,6 +740,103 @@
       </div>
     </section>
 
+    <section id="novias" class="py-5 bg-white">
+      <div class="container">
+        <div class="bridal-section px-4 px-md-5 shadow-sm" data-aos="fade-up">
+          <div class="text-center mb-5">
+            <span
+              class="text-uppercase tracking-wider fw-semibold text-secondary small"
+              >Especial Novias</span
+            >
+            <h2 class="fw-bold text-dark mt-1">
+              Wedding Planner & Tocados de Ensueño
+            </h2>
+            <p class="text-muted mx-auto" style="max-width: 600px">
+              Te asesoramos de forma personalizada para la elección o
+              combinación de tu corona, tiara o tocado floral. Evaluamos tus
+              facciones, el peinado y el escote del vestido para lograr un look
+              fresco, sofisticado y, sobre todo, muy natural.
+            </p>
+          </div>
+
+          <div class="row g-4 align-items-center justify-content-center">
+            <div class="col-md-5">
+              <div
+                class="card bridal-card h-100 border-0 p-4"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="text-center mb-3">
+                  <img
+                    src="./img/wedding.jpg"
+                    alt="Preparación y Coordinación de Casamientos"
+                    class="img-fluid rounded-4 mb-3 shadow-sm"
+                    style="
+                      height: 240px;
+                      width: 100%;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                  />
+                  <i class="bi bi-heart-fill text-danger fs-3"></i>
+                  <h4 class="fw-bold text-dark mt-2">
+                    Wedding Planner (Casamientos)
+                  </h4>
+                </div>
+                <p class="text-muted small text-center mb-0">
+                  Hacemos la función de Wedding Planner para preparar cada
+                  detalle de tu casamiento de principio a fin. Diseñamos un plan
+                  estético meses antes para asegurar una piel radiante,
+                  coordinando pruebas de maquillaje, iluminación fotográfica y
+                  asistencia absoluta el día del evento.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <div
+                class="card bridal-card h-100 border-0 p-4"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="text-center mb-3">
+                  <img
+                    src="./img/novia_.png"
+                    alt="Estilismo de Novias y Coronas Ro Pampalone"
+                    class="img-fluid rounded-4 mb-3 shadow-sm"
+                    style="
+                      height: 240px;
+                      width: 100%;
+                      object-fit: cover;
+                      object-position: center;
+                    "
+                  />
+                  <i class="bi bi-award-fill text-warning fs-3"></i>
+                  <h4 class="fw-bold text-dark mt-2">
+                    Diseño & Estilo en Coronas
+                  </h4>
+                </div>
+                <p class="text-muted small text-center mb-0">
+                  Te asesoramos de forma personalizada para la elección o
+                  combinación de tu corona, tiara o tocado floral. Evaluamos tus
+                  facciones, el peinado y el escote del vestido para lograr un
+                  look fresco, sofisticado y, sobre todo, muy natural.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <a
+              href="#reservar"
+              class="btn btn-primary-custom px-5 py-3 text-uppercase fw-bold tracking-wider btn-sm"
+              >Solicitar Entrevista para Bodas</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="reservar" class="py-5 bg-light">
       <div class="container">
         <div class="row justify-content-center">
@@ -777,6 +896,11 @@
                       <option value="Maquillaje Profesional de Eventos">
                         Maquillaje Profesional de Eventos
                       </option>
+                      <option
+                        value="Servicio Integral Novias y Asesoría de Coronas"
+                      >
+                        Especial Novias & Asesoría de Coronas / Tocados
+                      </option>
                       <option value="Tratamiento Anti-age / Dermoestética">
                         Tratamiento Anti-age / Dermoestética
                       </option>
@@ -815,7 +939,7 @@
                       class="form-control"
                       id="formNotes"
                       rows="3"
-                      placeholder="Cuéntame brevemente sobre tu tipo de piel o evento..."
+                      placeholder="Cuéntame sobre la fecha de tu boda, tu tipo de piel o evento..."
                     ></textarea>
                   </div>
                   <div class="col-md-12 mt-4">
@@ -894,7 +1018,7 @@
           </div>
           <div class="col-lg-6 text-center text-lg-end">
             <span class="small opacity-75">© 2026 Desarrollado por </span>
-            <a href="https://wa.me/5493816173184" class="footer-logo">EMWeb</a>
+            <a href="#" class="footer-logo">EzequielMonachesiWeb</a>
           </div>
         </div>
       </div>
